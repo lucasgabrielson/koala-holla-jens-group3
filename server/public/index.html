@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Koalla Holla</title>
+    <script src="vendors/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="views/styles.css">
+
+  </head>
+  <body>
+    <header>
+      <img src="images/icon.png" class="icon" height="250px" />
+      <h1>Koala Holla</h1>
+      <h3>1976 Llama Comma Drive</h2>
+      <h3>Walla Walla, WA</h2>
+    </header>
+    <section id="addKoala">
+      <h2>Add Koala</h2>
+      <label>Name:</label>
+      <input type="text" id="nameIn">
+      <label>Age:</label>
+      <input type="number" id="ageIn" min="0" max="30">
+      <label>Sex:</label>
+      <select id="genderIn" >
+        <option selected disabled>Sex</option>
+        <option>M</option>
+        <option>F</option>
+        </select>
+        <label>Transfer Status:</label>
+      <select id="readyForTransferIn">
+        <option selected disabled>T/F</option>
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+      <input type="text" id="notesIn" value="" placeholder="Notes">
+      <button class="btn btn-primary" type="button" id="addButton">Add Koala</button>
+    </section>
+    <section>
+      <h2>All Koalas</h2>
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Notes</th>
+            <th>Transfer Status</th>
+            <th>Change Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="viewKoalas">
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
